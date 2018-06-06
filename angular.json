@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "C:/Users/Test/Desktop/AngularFireCRUD/crud/node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },

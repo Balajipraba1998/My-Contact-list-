@@ -1,0 +1,15 @@
+<h6 class="text-center">Contact Register</h6><br/>
+<table class="table table-sm table-hover">
+  <tr *ngFor="let contact of contactList">
+      <td>{{contact.name}}</td>
+      <td>{{contact.position}}</td>
+      <td>
+        <a class="btn" (click)="onEdit(contact)">
+          <i class="fa fa-pencil-square-o"></i>
+        </a>
+        <a class="btn" (click)="onDelete(contact.$key)">
+          <i class="fa fa-trash-o"></i>
+        </a>
+      </td>
+  </tr>
+</table>
