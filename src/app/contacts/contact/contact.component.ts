@@ -1,20 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms'
-
+import { NgForm } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactService } from '../shared/contact.service';
 import { ToastrService } from 'ngx-toastr';
+import { ContactListComponent } from '../contact-list/contact-list.component';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
-  constructor(private contactService: ContactService, private tostr: ToastrService) { }
+/*contactFormName:any;
+contactFormRelation:any;
+contactFormLocation:any;
+contactFormPhone:any;
+contact:any;*/
+  constructor(private contactService: ContactService,  private tostr: ToastrService) { }
 
   ngOnInit() {
-    this.contactService.getData();
+    
     this.resetForm();
+    
   }
 
   onSubmit(contactForm: NgForm) {
@@ -24,6 +31,7 @@ export class ContactComponent implements OnInit {
       this.contactService.updateContact(contactForm.value);
     this.resetForm(contactForm);
     this.tostr.success('Submitted Succcessfully', 'Contact Register');
+
   }
 
   resetForm(contactForm?: NgForm) {
@@ -34,7 +42,7 @@ export class ContactComponent implements OnInit {
       name: '',
       relation: '',
       location: '',
-      phone: 0,
+      phone: 0, 
     }
   }
 

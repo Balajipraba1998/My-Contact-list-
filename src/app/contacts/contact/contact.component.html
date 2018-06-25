@@ -1,29 +1,28 @@
-<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
-  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="contactService.selectedcontact.$key">
+<form #contactForm="ngForm" class="formm" >
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="contactService.selectedContact.$key">
 <div class="form-group">
   <label>Name</label>
-  <input class="form-control" name="name" #name="ngModel" [(ngModel)]="contactService.selectedcontact.name" placeholder="Full Name" required>
+  <input class="form-control" name="name" #name="ngModel" [(ngModel)]="contactService.selectedContact.name" placeholder="Full Name" required>
 </div>
 <div class="form-group">
   <label>Relationship</label>
-  <input class="form-control" name="relation" #relation="ngModel" [(ngModel)]="contactService.selectedcontact.position" placeholder="Relation">
+  <input class="form-control" name="relation" #relation="ngModel" [(ngModel)]="contactService.selectedContact.relation" placeholder="Relation">
 </div>
 <div class="form-group">
   <label>Location</label>
-  <input class="form-control" name="location" #location="ngModel" [(ngModel)]="contactService.selectedcontact.location" placeholder="location">
+  <input class="form-control" name="location" #location="ngModel" [(ngModel)]="contactService.selectedContact.location" placeholder="Location">
 </div>
 <div class="form-group">
   <label>Phone</label>
   <div class="input-group">
-      
-      <input class="form-control" name="phone" #phone="ngModel" [(ngModel)]="contactService.selectedcontact.phone" placeholder="phone">
-  </div>
+       <input class="form-control" name="phone" #phone="ngModel" [(ngModel)]="contactService.selectedContact.phone" placeholder="Phone">
+  </div> 
 </div>
 <div class="form-group">
-  <button class="btn btn-default" type="submit" [disabled]="!contactForm.valid">
+  <button class="btn btn-default" type="submit" (click)="onSubmit(contactForm)" [disabled]="!contactForm.valid">
     <i class="fa fa-floppy-o"></i>
      Submit</button>
-  <button class="btn btn-default" type="button" (click)="resetForm(contactForm)">
+  <button class="btn btn-default" type="button" (click)="resetForm()">
     <i class="fa fa-repeat"></i>
      Reset</button>
 </div>

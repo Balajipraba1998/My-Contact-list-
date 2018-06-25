@@ -1,4 +1,4 @@
-{
+{"$schema": "http://json-schema.org/draft-04/schema#" ,
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",

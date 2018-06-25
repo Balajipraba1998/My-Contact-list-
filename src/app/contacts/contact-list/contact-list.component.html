@@ -1,15 +1,19 @@
-<h6 class="text-center">Contact Register</h6><br/>
+<h6 class="text-center">Contact List</h6><br/>
 <table class="table table-sm table-hover">
+  <!--<tr *ngIf="contactlist.length==0">
+    <td class="text-center" colspan="3">No Data Yet!</td>
+  </tr>-->
   <tr *ngFor="let contact of contactList">
       <td>{{contact.name}}</td>
-      <td>{{contact.position}}</td>
+      <td>{{contact.relation}}</td>
       <td>
         <a class="btn" (click)="onEdit(contact)">
-          <i class="fa fa-pencil-square-o"></i>
-        </a>
-        <a class="btn" (click)="onDelete(contact.$key)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+    </td>
+      <td>
+        <a class="btn" (click)="onDelete(contact)">
           <i class="fa fa-trash-o"></i>
-        </a>
-      </td>
-  </tr>
+        </a></td>
+  </tr>  
 </table>

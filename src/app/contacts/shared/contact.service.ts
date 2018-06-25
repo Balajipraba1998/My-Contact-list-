@@ -13,7 +13,7 @@ export class ContactService {
     return this.contactList;
   }
 
-  insertContact(contact : Contact)
+  insertContact(contact)
   {
     this.contactList.push({
       name: contact.name,

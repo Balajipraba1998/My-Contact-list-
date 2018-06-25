@@ -10,6 +10,7 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
 import { environment } from '../environments/environment'
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     FormsModule,
-    ToastrModule.forRoot()
+   ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

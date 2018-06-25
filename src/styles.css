@@ -7,3 +7,23 @@ input.ng-invalid.ng-dirty{
 button:hover,a.btn:hover{
     cursor: pointer;
    }
+.bg-img{
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:10;
+
+    width: 80%;
+    height: 100%;
+    background-image: url("../bgii.jpg");
+     
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.formm{
+    font-weight: bold;
+}
